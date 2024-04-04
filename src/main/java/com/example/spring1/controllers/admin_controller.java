@@ -39,6 +39,18 @@ public class admin_controller
 
         return st2;
 
+    }
 
+    @GetMapping("/studinfo")
+    public ResponseEntity<student> student2_info()
+    {
+
+        student st=new student();
+
+        st.setId(1);
+        st.setName("siddhi");
+        st.setEmail("sid@gmail.com");
+        st.setPassword("123");
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(st);
     }
 }
